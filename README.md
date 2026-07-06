@@ -1,6 +1,6 @@
 # Twitter Timeline Clone (Zaio Project)
 
-A fully responsive Twitter/X home timeline clone built with vanilla HTML, CSS, and JavaScript. No build step required — open in a browser or use a local server.
+A responsive Twitter/X home timeline clone built with vanilla HTML, CSS, and JavaScript. No build step required — open in a browser or use a local server.
 
 ## Quick Start
 
@@ -19,35 +19,20 @@ Then open http://localhost:8080
 npx serve .
 ```
 
-> **Note:** ES modules require a local server. Opening `index.html` directly from the file system may block module loading in some browsers.
-
-## Demo Login
-
-| Username | Password |
-|----------|----------|
-| `demo`   | `demo123`  |
-| `zaio`   | `zaio123`  |
-
-You can also create a new account via the sign-up form on the login page.
-
 ---
 
 ## Project Structure
 
 ```
 Twitter/
-├── index.html          # Entry point
-├── css/
-│   ├── variables.css   # Theme tokens (light + dark ready)
-│   └── main.css        # Layout, components, responsive rules
-├── js/
-│   ├── app.js          # Router, event bindings, app shell
-│   ├── auth.js         # Login/signup (Cursor feature)
-│   ├── components.js   # UI render functions
-│   ├── dark-mode.js    # MANUAL FEATURE — implement yourself!
-│   ├── data.js         # Seed tweets, trends, demo users
-│   ├── icons.js        # Inline SVG icons
-│   └── tweets.js       # Tweet CRUD, char limit, formatting
+├── index.html      # Home timeline (entry point)
+├── login.html      # Login page (Cursor-assisted)
+├── explore.html    # Explore page (Cursor-assisted)
+├── styles.css      # Layout, components, responsive rules
+├── darkmode.css    # Theme tokens (light + dark)
+├── login.css       # Login page styles
+├── darkmode.js     # MANUAL FEATURE — dark mode toggle, implemented by hand
+├── tweet.js        # Tweet posting, char limit, like toggle
 └── README.md
 ```
 
@@ -56,30 +41,28 @@ Twitter/
 ## Features Checklist (Assignment Mapping)
 
 ### Base Project (40 marks)
-- Home timeline — scrollable feed with seeded + user tweets
-- Left sidebar — navigation, Post button, user menu
-- Right sidebar — search, Trends for you, Who to follow
-- Tweet compose box — inline on home feed with 280-char counter (color shifts at 20 / 0)
-- Loading states — spinner while feed loads
-- Error handling — banner when tweet post fails + retry
-- Responsive — 3-column desktop to single column + bottom nav on mobile; scales up on 4K
-- Accessibility — keyboard focus on tweets, ARIA labels, semantic HTML
+- Home timeline — scrollable feed with seeded tweets
+- Left sidebar — navigation, Tweet button, profile card
+- Right sidebar — search box, trending topics
+- Tweet compose box — inline on home feed with 280-char counter (turns red under 20 remaining)
+- Like toggle — heart fills in and count updates on click
+- Responsive — 3-column desktop, condensed icon-only sidebar on tablet, bottom nav on mobile
+- Accessibility — semantic HTML, ARIA labels on search and tab controls
 
-### Cursor-Built Features (20 marks)
-1. **Login page** (`#/login`) — sign in, sign up, demo accounts, auth guard
-2. **Explore page** (`#/explore`) — trending tabs, news cards, live search filter
-3. **Tweet popup modal** — Post button opens modal compose (desktop sidebar + mobile FAB)
+### Cursor-Assisted Pages (20 marks)
+1. **Login page** (`login.html`) — sign-in form UI with username/password fields, forgot password link, create-account option
+2. **Explore page** (`explore.html`) — filter tabs (For You, Trending, News, Sports, Entertainment), trending topic grid, "What's happening" panel
 
-### Manual Feature — YOU implement (15 marks)
-**Dark mode toggle** in `js/dark-mode.js`
+### Manual Feature — implemented by hand (15 marks)
+**Dark mode toggle** in `darkmode.js`
 
-CSS is already wired in `css/variables.css` under `[data-theme="dark"]`. Your job:
-1. Read/save preference in `localStorage` key `twitter_clone_theme`
-2. Toggle `data-theme="dark"` on `<html>`
-3. Wire up `#dark-mode-toggle` and `#dark-mode-toggle-mobile`
-4. Bonus: respect `prefers-color-scheme` on first visit
+Theme variables live in `darkmode.css` under `[data-theme="light"]` and `[data-theme="dark"]`. The script:
+1. Reads/saves the preference in `localStorage` under the `theme` key
+2. Toggles `data-theme` on `<html>`
+3. Wires up the `#darkToggle` button (icon + label swap between moon/sun)
+4. Applies the saved theme automatically on page load
 
-**Do not use Cursor for this file** — that's the point of the assignment!
+**Built without Cursor** — that's the point of the assignment.
 
 ---
 
@@ -89,12 +72,12 @@ Keep it **under 5 minutes**. Suggested structure:
 
 | Time | What to show |
 |------|----------------|
-| 0:00–0:30 | Quick tour: home feed, sidebars, mobile responsive |
-| 0:30–1:30 | **Manual feature** — open `dark-mode.js`, explain your code, toggle dark mode live |
-| 1:30–2:30 | **Login page** — demo login, sign up, logout via user menu |
-| 2:30–3:30 | **Explore page** — tabs, search, trending list |
-| 3:30–4:30 | **Tweet modal** — click Post, compose, submit, see it in feed |
-| 4:30–5:00 | Optional Cursor roast + wrap up |
+| 0:00-0:30 | Quick tour: home feed, sidebars, mobile responsive |
+| 0:30-1:30 | Manual feature - open darkmode.js, explain your code, toggle dark mode live |
+| 1:30-2:30 | Login page - walk through the sign-in form |
+| 2:30-3:30 | Explore page - filter tabs, trending grid |
+| 3:30-4:30 | Tweet flow - compose a tweet, like a tweet, see it update live |
+| 4:30-5:00 | Optional Cursor roast and wrap up |
 
 ---
 
