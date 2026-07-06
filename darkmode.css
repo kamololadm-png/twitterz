@@ -1,0 +1,23 @@
+/* Light mode (default) */
+[data-theme="light"] {
+  --bg-primary:   #ffffff;
+  --bg-secondary: #f7f9f9;
+  --bg-blur:      rgba(255, 255, 255, 0.85);
+  --text-primary: #0f1419;
+  --text-secondary: #536471;
+  --border:       #eff3f4;
+  --hover:        #f7f9f9;
+  --accent:       #1d9bf0;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg-primary:   #15202b;
+  --bg-secondary: #1e2732;
+  --bg-blur:      rgba(21, 32, 43, 0.85);
+  --text-primary: #e7e9ea;
+  --text-secondary: #8b98a5;
+  --border:       #38444d;
+  --hover:        #1e2732;
+  --accent:       #1d9bf0;
+}

@@ -1,0 +1,43 @@
+:root {
+  --font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+  --font-size-base: 15px;
+  --font-size-sm: 13px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+
+  --color-primary: #1d9bf0;
+  --color-primary-hover: #1a8cd8;
+  --color-like: #f91880;
+  --color-retweet: #00ba7c;
+
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f7f9f9;
+  --color-bg-hover: rgba(15, 20, 25, 0.1);
+  --color-border: #eff3f4;
+  --color-text: #0f1419;
+  --color-text-secondary: #536471;
+  --color-text-muted: #8b98a5;
+
+  --sidebar-width: 275px;
+  --right-sidebar-width: 350px;
+  --max-content-width: 600px;
+  --header-height: 53px;
+
+  --radius-sm: 4px;
+  --radius-md: 16px;
+  --radius-full: 9999px;
+
+  --shadow-modal: 0 0 15px rgba(0, 0, 0, 0.2);
+  --transition: 200ms ease;
+}
+
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-bg-secondary: #16181c;
+  --color-bg-hover: rgba(231, 233, 234, 0.1);
+  --color-border: #2f3336;
+  --color-text: #e7e9ea;
+  --color-text-secondary: #71767b;
+  --color-text-muted: #536471;
+  --shadow-modal: 0 0 15px rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore / X</title>
+    <link rel="stylesheet" href="css/darkmode.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-grid">
+      <aside class="sidebar">
+        <div class="sidebar-logo" aria-label="X logo">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.261 5.633 5.902-5.633Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+          </a>
+          <a href="explore.html" class="nav-item active">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <span>Explore</span>
+          </a>
+          <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+            <span>Notifications</span>
+          </a>
+          <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <span>Messages</span>
+          </a>
+          <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            <span>Profile</span>
+          </a>
+        </nav>
+
+        <button class="tweet-btn" type="button">Tweet</button>
+
+        <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" type="button">
+          <span id="darkIcon">🌙</span>
+          <span id="darkLabel">Dark mode</span>
+        </button>
+
+        <div class="sidebar-profile">
+          <img src="./assets/IMG-20260607-WA0019.jpg" alt="avatar" class="avatar" />
+          <div class="profile-info">
+            <span class="profile-name">Kamogelo D.</span>
+            <span class="profile-handle">@kamogelo_dev</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="explore-main">
+        <div class="explore-header">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+              <circle cx="11" cy="11" r="6"></circle>
+              <path d="M20 20L16.65 16.65"></path>
+            </svg>
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="filter-tabs" role="tablist" aria-label="Explore filters">
+          <button class="filter-tab active" type="button">For You</button>
+          <button class="filter-tab" type="button">Trending</button>
+          <button class="filter-tab" type="button">News</button>
+          <button class="filter-tab" type="button">Sports</button>
+          <button class="filter-tab" type="button">Entertainment</button>
+        </div>
+
+        <section class="trend-grid" aria-label="Trending topics">
+          <article class="trend-card">
+            <span class="trend-category">Technology · Trending</span>
+            <span class="trend-hashtag">#JavaScript</span>
+            <span class="trend-count">42.1K Tweets</span>
+          </article>
+          <article class="trend-card">
+            <span class="trend-category">South Africa · Trending</span>
+            <span class="trend-hashtag">#JoziDevs</span>
+            <span class="trend-count">8.4K Tweets</span>
+          </article>
+          <article class="trend-card">
+            <span class="trend-category">Business · Trending</span>
+            <span class="trend-hashtag">#AI</span>
+            <span class="trend-count">31.2K Tweets</span>
+          </article>
+          <article class="trend-card">
+            <span class="trend-category">Music · Trending</span>
+            <span class="trend-hashtag">#Afrobeats</span>
+            <span class="trend-count">19.7K Tweets</span>
+          </article>
+          <article class="trend-card">
+            <span class="trend-category">Sports · Trending</span>
+            <span class="trend-hashtag">#WAFCON</span>
+            <span class="trend-count">14.9K Tweets</span>
+          </article>
+          <article class="trend-card">
+            <span class="trend-category">Culture · Trending</span>
+            <span class="trend-hashtag">#DesignSystem</span>
+            <span class="trend-count">6.8K Tweets</span>
+          </article>
+        </section>
+      </main>
+
+      <aside class="right-panel">
+        <div class="promo-card">
+          <h2>Stay updated</h2>
+          <p>Follow topics and discover what people are talking about right now.</p>
+        </div>
+
+        <div class="trending-box">
+          <h2>What’s happening</h2>
+          <div class="trending-item">
+            <span class="trend-category">Technology · Trending</span>
+            <span class="trend-hashtag">#CSS</span>
+            <span>17.3K Tweets</span>
+          </div>
+          <div class="trending-item">
+            <span class="trend-category">News · Trending</span>
+            <span class="trend-hashtag">#WorldCup</span>
+            <span>12.1K Tweets</span>
+          </div>
+          <div class="trending-item">
+            <span class="trend-category">Entertainment · Trending</span>
+            <span class="trend-hashtag">#Netflix</span>
+            <span>9.4K Tweets</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="darkmode.js"></script>
+  </body>
+</html>
