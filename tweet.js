@@ -16,7 +16,7 @@ function postTweet() {
   const card = document.createElement('article');
   card.className = 'tweet-card';
   card.innerHTML = `
-    <img src="https://i.pravatar.cc/40?img=12" alt="avatar" class="avatar"/>
+    <img src="./assets/IMG-20260607-WA0019.jpg" alt="avatar" class="avatar"/>
     <div class="tweet-body">
       <div class="tweet-meta">
         <span class="tweet-name">Kamogelo D.</span>
